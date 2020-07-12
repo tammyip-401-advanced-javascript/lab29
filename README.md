@@ -6,7 +6,7 @@ Author: Tammy Ip
 
 Links and Resources (see below)
 submission PR: `https://github.com/tammyip-401-advanced-javascript/lab29/pull/1`
-Netlify: `https://401n16lab28.netlify.app/`
+Netlify: `https://401n16lab29.netlify.app/`
 
 
 Documentation
@@ -19,7 +19,7 @@ Setup
 + npm i
 + npm install node-sass
 + npm install react-router-dom
-+ npm install react-bootstrap bootstrap
+<!-- + npm install react-bootstrap bootstrap -->
 + npm install react-redux redux
 + npm install @material-ui/core
 + start server with npm start
@@ -28,4 +28,5 @@ Setup
 
 
 UML
-https://docs.google.com/spreadsheets/d/15xwpH9O-ubKz6D0FaNdpvIEJQKqmIvHPGfLbGLM_7Y8/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1sw0adJaHaBHW2L59uq4rBPsARrtVH1QerUsuJKG0zDU/edit?usp=sharing
+

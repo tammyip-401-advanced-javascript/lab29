@@ -9,9 +9,11 @@ function Categories(props) {
         categoryHTML.push(
             <button
                 key={i}
-                onClick={(e) => {
-                    // TODO: What should you dispatch?
-                    props.dispatch();
+                onClick={() => {
+                    props.dispatch({
+                        type: 'SET_CURRENT_CATEGORY',
+                        payload: props.categories[i].name,
+                    });
                 }}
             >
                 {category.displayName || category.name}
@@ -21,7 +23,7 @@ function Categories(props) {
 
     return (
         <div>
-            <h5>Browse our Categories</h5>
+            <h3>Browse our Categories:</h3>
             {categoryHTML}
         </div>
     );

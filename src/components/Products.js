@@ -1,17 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Grid } from '@material-ui/core';
 
 import SingleProduct from './SingleProduct';
 
 function Products(props) {
-    // TODO: define this function
-    function addToCart(indx) {}
+    function addToCart(indx) {
+        props.dispatch({ type: 'ADD_TO_CART', payload: props.products[indx] });
+    }
 
-    // TODO: define this function
-    function viewDetails(indx) {}
+    function viewDetails(indx) { }
 
-    // get only the products that belong to the current
-    // category
     const filteredProducts = props.products.filter(
         (product) => product.category === props.currentCategory,
     );
@@ -26,8 +25,6 @@ function Products(props) {
             <SingleProduct
                 key={i}
                 name={product.name}
-                img={product.img}
-                alt={product.name}
                 description={product.description}
                 add={(e) => {
                     addToCart(i);
@@ -39,7 +36,11 @@ function Products(props) {
         );
     }
 
-    return <>{productsHTML}</>;
+    return (
+        <Grid id='products' container spacing={4}>
+            {productsHTML}
+        </Grid>
+    );
 }
 
 const mapStateToProps = (state) => ({

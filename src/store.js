@@ -2,18 +2,18 @@ import { createStore } from 'redux';
 
 const initState = {
     categories: [
-        { name: 'electronics', displayName: 'Electronics' },
-        { name: 'food', displayName: 'Food' },
-        { name: 'clothing', displayName: 'Clothing' },
+        { name: 'Electronics', displayName: 'Electronics' },
+        { name: 'Clothing', displayName: 'Clothing' },
+        { name: 'Supplements', displayName: 'Supplements' },
     ],
     products: [
-        { name: 'TV', category: 'electronics', price: 699.0, inStock: 5 },
-        { name: 'Radio', category: 'electronics', price: 99.0, inStock: 15 },
-        { name: 'Shirt', category: 'clothing', price: 9.0, inStock: 25 },
-        { name: 'Socks', category: 'clothing', price: 12.0, inStock: 10 },
-        { name: 'Apples', category: 'food', price: 0.99, inStock: 500 },
-        { name: 'Eggs', category: 'food', price: 1.99, inStock: 12 },
-        { name: 'Bread', category: 'food', price: 2.39, inStock: 90 },
+        { name: 'Facial Steamer', category: 'Electronics', price: 199.0, inStock: 5 },
+        { name: 'Hairdryer', category: 'Electronics', price: 79.0, inStock: 15 },
+        { name: 'Shirt', category: 'Clothing', price: 30.0, inStock: 25 },
+        { name: 'Dress', category: 'Clothing', price: 50.0, inStock: 10 },
+        { name: 'Clear Skin Formula', category: 'Supplements', price: 20.99, inStock: 500 },
+        { name: 'Collagen Powder', category: 'Supplements', price: 29.99, inStock: 12 },
+        { name: 'Beauty Gummies', category: 'Supplements', price: 11.99, inStock: 90 },
     ],
     currentCategory: '',
     cart: [],
@@ -40,3 +40,4 @@ const reducer = (state = initState, action) => {
 };
 
 export default createStore(reducer);
+export { reducer };
