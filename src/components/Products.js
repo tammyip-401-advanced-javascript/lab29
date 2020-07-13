@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Grid } from '@material-ui/core';
-
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import SingleProduct from './SingleProduct';
+
+configure({ adapter: new Adapter() });
 
 function Products(props) {
     function addToCart(indx) {
